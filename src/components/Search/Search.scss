@@ -1,0 +1,80 @@
+@import "../../sass/mixins.scss";
+
+.search {
+  width: 30%;
+  padding: 3rem 0;
+  min-width: 15rem;
+  height: 100vh;
+  background-color: rgba(23, 24, 26, 0.717);
+  transition: all 0.5s ease-in-out;
+  &__input-container {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    & > div {
+      display: flex;
+    }
+    & .input {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid rgb(255, 255, 255);
+      color: inherit;
+      font-size: 1.2rem;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: #ffffff73;
+      }
+    }
+    & .error {
+      position: absolute;
+      color: red;
+      font-style: italic;
+      font-size: 0.8rem;
+      bottom: -100%;
+    }
+  }
+  &.open {
+    left: 0;
+  }
+  form button {
+    background-color: rgb(165, 165, 165);
+    border: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    width: 70%;
+    max-width: 10rem;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.search__toggle-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 5;
+  margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .search {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.979);
+    padding-top: 6rem;
+    form button {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+  }
+  .search__toggle-btn {
+    display: block;
+    cursor: pointer;
+  }
+}

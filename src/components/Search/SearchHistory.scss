@@ -1,0 +1,20 @@
+.search-history{
+    padding: 2rem .5rem;
+    p{
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #bebebe;
+        transition: all .2s;
+        &:hover{
+            background-color: #ffffff33;
+            color: #fff;
+        }
+    }
+    h4{
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+}

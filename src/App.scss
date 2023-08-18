@@ -1,0 +1,22 @@
+@import './sass/mixins.scss';
+
+.app {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("./assets/background.webp");
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  @include center-flex(row);
+  &__content {
+    background-color: #312e4e2c;
+    border-radius: 5px;
+    display: flex;
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
+  }
+}

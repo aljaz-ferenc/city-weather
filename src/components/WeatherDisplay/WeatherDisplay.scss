@@ -1,0 +1,74 @@
+@import "../../sass/mixins.scss";
+
+.weather-display {
+  width: 100%;
+  padding: 2rem;
+  @include center-flex(column);
+  backdrop-filter: contrast(1.5);
+  .top {
+    text-align: center;
+    align-items: center;
+    &__temp {
+      font-size: 4rem;
+    }
+    &__city {
+      font-size: 5rem;
+      font-weight: bold;
+      span {
+        font-size: 2.5rem;
+      }
+    }
+    &__description {
+      font-size: 1.4rem;
+    }
+    &__weather img {
+      height: 15rem;
+    }
+  }
+  .bottom {
+    margin-top: 5% !important;
+    width: 100%;
+    justify-content: center !important;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    max-width: 25rem;
+    justify-items: center;
+    align-items: center;
+
+    p {
+      &:first-child {
+        font-weight: bold;
+      }
+      &:nth-child(2) {
+        width: max-content;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .weather-display {
+    padding: 0;
+    .top {
+      &__city {
+        font-size: 3rem;
+      }
+      &__temp {
+        font-size: 3.5rem;
+      }
+    }
+    .bottom {
+      display: grid;
+      row-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      align-items: center;
+      justify-items: center;
+      gap: 2rem;
+    }
+  }
+}
